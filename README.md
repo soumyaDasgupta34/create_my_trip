@@ -24,4 +24,4 @@ http://ec2-15-206-27-229.ap-south-1.compute.amazonaws.com/coverage/
 ## API Documentation
 
 The documentation can be found here :
-https://github.com/soumyaDasgupta34/create_my_trip/tree/main/api.documentation
+https://github.com/soumyaDasgupta34/create_my_trip/blob/main/api.documentation/Create%20My%20Trip.md
