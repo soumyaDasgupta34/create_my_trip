@@ -1,0 +1,26 @@
+{
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "jsonwebtoken": "^8.5.1",
+    "ndb": "^1.1.5",
+    "validator": "^13.7.0"
+  },
+  "name": "createmytrip",
+  "version": "1.0.0",
+  "description": "Bus Tours Booking",
+  "main": "server.js",
+  "devDependencies": {
+    "jest": "^27.5.1",
+    "mockingoose": "^2.15.2",
+    "nodemon": "^2.0.15"
+  },
+  "scripts": {
+    "debug": "ndb server.js",
+    "start": "nodemon server.js",
+    "test": "jest"
+  },
+  "author": "Soumya Dasgupta",
+  "license": "ISC"
+}
