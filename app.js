@@ -11,6 +11,7 @@ app.use(express.json());
 
 app.use('/login', userRouter);
 app.use('/seat', bookingsRouter);
+app.use('/coverage', express.static('./coverage/lcov-report'));
 
 app.all('*', (req, res, next) => {
   next(new AppError(`Can't find ${req.originalUrl} on this server!`, 404));
