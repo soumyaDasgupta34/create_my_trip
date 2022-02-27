@@ -63,5 +63,16 @@ describe('Authentication Service Test', () => {
       );
       expect(next).toBeCalled();
     });
+    test('User does not have access', () => {
+      mockRequest.user.role = 'user';
+      authenticationService.restrictTo('admin')(
+        mockRequest,
+        { response: 'Response' },
+        next
+      );
+      expect(next).toBeCalledWith(
+        new AppError('User does not have access', 403)
+      );
+    });
   });
 });

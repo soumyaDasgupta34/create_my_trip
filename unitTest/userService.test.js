@@ -25,8 +25,6 @@ describe('User Service test', () => {
       expect(token).toBe('token');
     });
     test('Invalid email Id', async () => {
-      jest.spyOn(jwt, 'sign').mockReturnValueOnce('token');
-      jest.spyOn(User, 'findOne').mockResolvedValueOnce('token');
       jest.spyOn(validator, 'isEmail').mockReturnValueOnce(false);
       const token = await userService.logIn(mockRequest, {}, next);
       expect(token).toBe(undefined);
