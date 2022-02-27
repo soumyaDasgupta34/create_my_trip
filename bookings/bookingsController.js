@@ -7,7 +7,7 @@ exports.reserveSeat = catchAsync(async (req, res, next) => {
   if (!newBooking) {
     next(new AppError('Invalid seat number', 1003));
   } else {
-    const { _id, __v, ...result } = newBooking._doc;
+    const { _id, __v, ...result } = newBooking[0].toObject();
     res.status(201).json({
       status: 'success',
       statusCode: 201,

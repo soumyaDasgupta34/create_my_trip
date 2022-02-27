@@ -22,8 +22,16 @@ const booking = {
 
 describe('Book Service', () => {
   describe('Reserve Seat', () => {
+    const mockSession = {
+      startTransaction: jest.fn(),
+      commitTransaction: jest.fn(),
+      endSession: jest.fn(),
+    };
     it('Happy Scenario. Seat number between 1 and 40', async () => {
       jest.spyOn(Bookings, 'create').mockReturnValueOnce(booking);
+      jest
+        .spyOn(Bookings.db, 'startSession')
+        .mockResolvedValueOnce(mockSession);
       expect.assertions(1);
       const data = await bookingsService.reserveSeat(req);
       expect(data).toEqual(booking);

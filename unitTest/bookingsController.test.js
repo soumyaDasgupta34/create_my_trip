@@ -4,16 +4,18 @@ const catchAsync = require('./../errorHandling/catchAsync');
 const bookingsService = require('../bookings/bookingsService');
 const { expect } = require('@jest/globals');
 
-const newBookings = {
-  _doc: {
-    _id: '6219a37dd9a20e1f944b1dca',
-    passengerAge: 23,
-    passengerName: 'Soumya Dasgupta',
-    passengerPhone: 903289882,
-    seatNumber: 29,
-    __v: 0,
+const newBookings = [
+  {
+    toObject: () => ({
+      _id: '6219a37dd9a20e1f944b1dca',
+      passengerAge: 23,
+      passengerName: 'Soumya Dasgupta',
+      passengerPhone: 903289882,
+      seatNumber: 29,
+      __v: 0,
+    }),
   },
-};
+];
 
 const mockRequest = {
   body: {
