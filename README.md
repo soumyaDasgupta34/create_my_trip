@@ -9,6 +9,7 @@ git clone https://github.com/soumyaDasgupta34/create_my_trip.git
 cd create_my_trip
 npm i
 # Edit the config.env file with variable values
+npx jest --coverage
 npm start
 ```
 
